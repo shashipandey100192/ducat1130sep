@@ -1,24 +1,19 @@
 const express = require('express');
 const cors = require('cors');
+const app = express();
 require('dotenv').config();
 require('./db/connection');
+const rout = require('./routes/route');
 
 const port  = process.env.port || 4500;
 
-const app = express();
-
-app.get("/",(req,res)=>{
-    res.send("welcome to express js");
-})
-
-app.get("/about",(req,res)=>{
-    res.send("about file ");
-})
 
 
 
-// app.use(json());
-// app.use(cors);
+
+app.use(express.json());
+app.use(cors());
+app.use(rout);
 
 
 app.listen(port,()=>{
