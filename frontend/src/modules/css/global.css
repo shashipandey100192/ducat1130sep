@@ -2,3 +2,16 @@
 {
     margin-top:30px !important;
 }
+.reg
+{
+    width:600px;
+}
+
+@media(max-width:600px)
+{
+    .reg
+    {
+        width:100%;
+    }
+
+}

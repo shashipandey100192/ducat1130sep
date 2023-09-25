@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Mynavbar() {
   return (
@@ -30,9 +31,18 @@ function Mynavbar() {
           <a className="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
       </ul>
-      <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
+      <form className="d-flex me-5">
+      <div className="dropdown">
+  <button className="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    current user
+  </button>
+  <ul className="dropdown-menu">
+    <li><Link className="dropdown-item" to="#">Profile</Link></li>
+    <li><Link className="dropdown-item" to="/">Login</Link></li>
+    <li><Link className="dropdown-item" to="registor">Registor</Link></li>
+    <li><Link className="dropdown-item" to="/">Logout</Link></li>
+  </ul>
+</div>
       </form>
     </div>
   </div>

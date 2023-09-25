@@ -20,6 +20,9 @@ function Landingpage() {
     return (
         <div className='container page'>
             <div className='row'>
+                <div className='col-12 text-end'>
+                    <p className='h2'>Total:{single.length}</p>
+                </div>
                 <div className='col-12'>
                     <table class="table table-bordered">
                         <thead>
