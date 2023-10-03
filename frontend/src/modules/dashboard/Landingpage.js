@@ -34,6 +34,7 @@ function Landingpage() {
                                 <th scope="col">Phone No</th>
                                 <th scope="col">Gender</th>
                                 <th scope="col">City</th>
+                                <th scope="col">Profile</th>
                                 <th scope="col">Actions</th>
                             </tr>
                         </thead>
@@ -43,11 +44,12 @@ function Landingpage() {
                                     <tr>
                                         <td>{++i}</td>
                                         <th scope="row">{d._id} </th>
-                                        <td>{d.Name}</td>
+                                        <td>{d.fullname}</td>
                                         <td>{d.email}</td>
                                         <td>{d.phone}</td>
                                         <td>{d.gender}</td>
                                         <td>{d.city}</td>
+                                        <td><img src={d.mypic} width="50" alt="user pro"/></td>
                                         <td>
                                             <button className='btn btn-sm btn-primary'>View</button>
                                             <button className='btn btn-sm btn-warning ms-2'>Edit</button>

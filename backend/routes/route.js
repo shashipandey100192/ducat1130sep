@@ -19,5 +19,22 @@ rout.get("/alldata",async(req,res)=>{
 
 
 
+// post / create  api
+rout.post("/create",async(req,res)=>{
+    const {fullname,email,phone,city,gender,pass,mypic} = req.body;
+    const adduser = new myschima({
+        fullname,email,phone,city,gender,pass,mypic
+    });
+    await adduser.save();
+    res.status(200).json(adduser);
+    console.log(adduser);
+});
+
+
+
+
+
+
+
 module.exports = rout
 

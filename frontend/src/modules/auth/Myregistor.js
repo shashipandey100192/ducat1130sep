@@ -7,7 +7,8 @@ const [sdata,supdat]=useState({
   phone:"",
   gender:"",
   city:"",
-  pass:""
+  pass:"",
+  mypic:""
 })
 
 const chanfunc = (e) => {
@@ -20,9 +21,25 @@ const chanfunc = (e) => {
   })
 }
 
-const Myregistoruser= ()=>{
-  alert("hi");
-  console.log(sdata);
+const Myregistoruser = async()=>{
+  if(sdata.fullname==="")
+  {
+      alert("please fill forms");
+  }
+  else{
+  const { fullname, email, phone, city, gender,pass,mypic } = sdata;
+  const res = await fetch("http://localhost:8080/create", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+          fullname, email, phone, city, gender,pass,mypic
+      })
+  })
+  const data = await res.json();
+  console.log(data);
+  // window.location.href="/";
+
+  }
 }
 
 
@@ -58,6 +75,10 @@ const Myregistoruser= ()=>{
         <div className='col-md-6 mt-2'>
           <label className="form-label">password</label>
           <input type="password" className="form-control" name='pass' value={sdata.pass} onChange={chanfunc}/>
+        </div>
+        <div className='col-md-12 mt-2'>
+          <label className="form-label">profile Image</label>
+          <input type="text" placeholder="paste img url only" className="form-control" name='mypic' value={sdata.mypic} onChange={chanfunc}/>
         </div>
         <div className='col-md-12 mt-2 text-center pt-2'>
           <button className='btn btn-success' type='button' onClick={Myregistoruser}> Registor</button>
