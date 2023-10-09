@@ -31,6 +31,24 @@ rout.post("/create",async(req,res)=>{
 });
 
 
+/*single data api*/
+rout.get("/singledata/:id",async(req,res)=>{
+    const {id} = req.params;
+    const mydata = await myschima.findById({_id:id});
+    res.json(mydata);
+    console.log(mydata);
+});
+
+
+// delete api
+rout.delete("/deleterecord/:id",async(req,res)=>{
+    const {id} = req.params;
+    const a = await myschima.findByIdAndDelete({_id:id})
+    console.log(a);
+    res.status(201).json(a);
+});
+
+
 
 
 

@@ -9,6 +9,7 @@ import Errorpage from './modules/shares/Errorpage';
 import Landingpage from './modules/dashboard/Landingpage';
 import Mynavbar from './modules/shares/Mynavbar';
 import "./modules/css/global.css";
+import Detailspage from './modules/dashboard/Detailspage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -20,7 +21,7 @@ root.render(
           <Route path='' element={<Mylogin/>}/>
           <Route path='registor' element={<Myregistor/>}/>
           <Route path='dashboard' element={<Landingpage/>}/>
-
+          <Route path='dashboard/userdetail/:id' element={<Detailspage/>}/>
           <Route path='*' element={<Errorpage/>}/>
 
         

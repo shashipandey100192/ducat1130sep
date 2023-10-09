@@ -37,7 +37,7 @@ const Myregistoruser = async()=>{
   })
   const data = await res.json();
   console.log(data);
-  // window.location.href="/";
+  window.location.href="/";
 
   }
 }
