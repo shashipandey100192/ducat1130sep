@@ -62,7 +62,7 @@ function Landingpage() {
                                         <td><img src={d.mypic} width="50" alt="user pro"/></td>
                                         <td>
                                             <Link className='btn btn-sm btn-primary' to={`userdetail/`+d._id}>View</Link>
-                                            <button className='btn btn-sm btn-warning ms-2'>Edit</button>
+                                            <Link className='btn btn-sm btn-warning ms-2' to={`edit/`+d._id}>Edit</Link>
                                             <button className='btn btn-sm btn-danger ms-2' onClick={()=>deleterecor(d._id)}>Del</button>
                                         </td>
                                     </tr>

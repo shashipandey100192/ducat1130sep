@@ -49,6 +49,15 @@ rout.delete("/deleterecord/:id",async(req,res)=>{
 });
 
 
+// update api
+rout.patch("/updateuser/:id",async(req,res)=>{
+    const {id} = req.params;
+    const recordupdate = await myschima.findByIdAndUpdate(id,req.body,{new:true});
+    console.log(recordupdate);
+    res.status(201).json(recordupdate);
+});
+
+
 
 
 

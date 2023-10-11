@@ -10,6 +10,7 @@ import Landingpage from './modules/dashboard/Landingpage';
 import Mynavbar from './modules/shares/Mynavbar';
 import "./modules/css/global.css";
 import Detailspage from './modules/dashboard/Detailspage';
+import Edituser from './modules/dashboard/Edituser';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -22,6 +23,7 @@ root.render(
           <Route path='registor' element={<Myregistor/>}/>
           <Route path='dashboard' element={<Landingpage/>}/>
           <Route path='dashboard/userdetail/:id' element={<Detailspage/>}/>
+          <Route path='dashboard/edit/:id' element={<Edituser/>}/>
           <Route path='*' element={<Errorpage/>}/>
 
         
