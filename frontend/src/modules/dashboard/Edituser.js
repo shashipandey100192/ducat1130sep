@@ -25,7 +25,7 @@ function Edituser() {
       }
 
       const edituser = () => {
-        axios.get(`http://localhost:8080/singledata/${id}`).then((res) => {
+        axios.get(`https://ducat1130sep.onrender.com/singledata/${id}`).then((res) => {
             console.log(res.data);
             supdat(res.data);
         })
@@ -37,7 +37,7 @@ function Edituser() {
 
         const editupdate = async()=>{
             const {fullname,email,phone,gender,city,pass,mypic} = sdata;
-            const res = await fetch(`http://localhost:8080/updateuser/${id}`,{
+            const res = await fetch(`https://ducat1130sep.onrender.com/updateuser/${id}`,{
               method:"PATCH",
               headers:{"Content-Type":"application/json"},
               body:JSON.stringify({

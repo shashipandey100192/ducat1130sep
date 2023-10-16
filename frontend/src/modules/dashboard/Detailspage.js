@@ -7,7 +7,7 @@ function Detailspage() {
     const [single, dufncion1] = useState({});
 
     const Singleuser = () => {
-        axios.get(`http://localhost:8080/singledata/${id}`).then((res) => {
+        axios.get(`https://ducat1130sep.onrender.com/singledata/${id}`).then((res) => {
             console.log(res.data);
             dufncion1(res.data);
         })

@@ -7,7 +7,7 @@ function Landingpage() {
     const [single, dufncion] = useState([]);
 
     const Mygetalldata = () => {
-        axios.get('http://localhost:8080/alldata').then((res) => {
+        axios.get('https://ducat1130sep.onrender.com/alldata').then((res) => {
             console.log(res.data);
             dufncion(res.data);
         })
@@ -18,7 +18,7 @@ function Landingpage() {
 
 
     const deleterecor = async(id)=>{
-        await axios.delete(`http://localhost:8080/deleterecord/${id}`).then((res)=>{
+        await axios.delete(`https://ducat1130sep.onrender.com/deleterecord/${id}`).then((res)=>{
             console.log(res.data);
             Mygetalldata();
             });

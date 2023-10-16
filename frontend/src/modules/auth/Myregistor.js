@@ -28,7 +28,7 @@ const Myregistoruser = async()=>{
   }
   else{
   const { fullname, email, phone, city, gender,pass,mypic } = sdata;
-  const res = await fetch("http://localhost:8080/create", {
+  const res = await fetch("https://ducat1130sep.onrender.com/create", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
